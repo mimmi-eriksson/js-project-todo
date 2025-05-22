@@ -1,8 +1,8 @@
-const TaskButton = () => {
+const TaskButton = ({ icon, text }) => {
   return (
-    <div>
-      placeholder div
-    </div>
+    <button className="bg-surface p-2">
+      <img src={icon} alt={text} />
+    </button>
   )
 }
 
