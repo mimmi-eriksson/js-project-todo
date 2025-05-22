@@ -1,6 +1,6 @@
 const Controls = () => {
   return (
-    <div>
+    <div className="bg-surface dark:bg-surface-dark">
       <p>controls</p>
     </div>
   )

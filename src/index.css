@@ -2,12 +2,27 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Work Sans", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 @theme {
-  --color-background-light: #F9FAFB;
-  --color-background-dark: #111827;
-
+  --color-primary: #EFF6FF;
+  --color-secondary: #1E3A8A;
+  --color-background: #FFFFF;
+  --color-surface: #F9FAFB;
+  --color-border: #E5E7EB;
+  --color-text: #111827;
+  --color-text-secondary: #525967;
+  --color-accent: #064DC1;
+  --color-hover: #03378E;
+  --color-primary-dark: #1E3A8A;
+  --color-secondary-dark: #DBEAFE;
+  --color-background-dark: #1F2937;
+  --color-surface-dark: #111827;
+  --color-border-dark: #374151;
+  --color-text-dark: #F9FAFB;
+  --color-text-secondary-dark: #ADB4C0;
+  --color-accent-dark: #72B9FF;
+  --color-hover-dark: #BADDFF;
 
 }

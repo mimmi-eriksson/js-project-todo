@@ -1,8 +1,8 @@
-const ControlsButton = () => {
+const ControlsButton = ({ icon, text }) => {
   return (
-    <div>
-      placeholder div
-    </div>
+    <button className="">
+      <img src={icon} alt={text} />
+    </button>
   )
 }
 

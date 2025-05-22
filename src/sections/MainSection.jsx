@@ -1,13 +1,11 @@
 import Controls from "../components/Controls"
-import Counter from "../components/Counter"
 import TaskList from "../components/TaskList"
 
 const MainSection = () => {
   return (
-    <section>
+    <section className="bg-surface dark:bg-surface-dark">
       <Controls />
       <TaskList />
-      <Counter />
     </section>
   )
 }
