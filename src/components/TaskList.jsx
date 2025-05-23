@@ -1,9 +1,9 @@
 import Task from "./Task"
 import Counter from "./Counter"
-import taskStore from "../stores/taskStore"
+import useTaskStore from "../stores/useTaskStore"
 
 const TaskList = () => {
-  const tasks = taskStore(state => state.tasks)
+  const tasks = useTaskStore(state => state.tasks)
   return (
     <div className="bg-background dark:bg-background-dark">
       <div>

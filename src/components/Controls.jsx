@@ -1,27 +1,21 @@
-import taskStore from "../stores/taskStore"
+import useTaskStore from "../stores/useTaskStore"
 import { useState } from "react"
 
 const Controls = () => {
-  const addTask = taskStore(state => state.addTask)
+  const addTask = useTaskStore(state => state.addTask)
 
-  const [newTask, setNewTask] = useState({
-    title: "",
-    isCompleted: false
-  })
+  const [newTask, setNewTask] = useState("")
 
   const handleChange = (event) => {
-    setNewTask({
-      ...newTask,
-      [event.target.name]: event.target.value
-    })
+    setNewTask(event.target.value)
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    if (newTask.title) {
+    if (newTask) {
       addTask(newTask)
-      setNewTask({ title: "", isCompleted: false })
+      setNewTask("")
     } else {
       alert("please fill in a task")
     }
@@ -31,7 +25,7 @@ const Controls = () => {
     <div className="bg-surface dark:bg-surface-dark">
       <form onSubmit={handleSubmit}>
         <label htmlFor="addTask">Add task</label>
-        <input type="text" id="addTask" name="title" value={newTask.title} onChange={handleChange} />
+        <input type="text" id="addTask" value={newTask} onChange={handleChange} />
         <button type="submit">Add task</button>
       </form>
     </div>
