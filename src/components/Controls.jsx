@@ -45,7 +45,7 @@ const Controls = () => {
           }
           {inputVisible && <button className="font-medium text-xl text-accent dark:text-accent-dark hover:text-hover dark:hover:text-hover-dark cursor-pointer px-2 py-1" type="submit">Done</button>}
           {!inputVisible &&
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 md:gap-2">
               <ControlsButton icon={Funnel} ariaLabel="Filter" />
               <ControlsButton onClick={() => completeAll()} icon={SquareCheck} ariaLabel="Complete all" />
               <ControlsButton onClick={() => deleteAll()} icon={Trash2} ariaLabel="Delete all" />

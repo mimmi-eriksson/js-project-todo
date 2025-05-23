@@ -13,7 +13,7 @@ const ControlsButton = ({
     <button
       onClick={onClick}
       aria-label={ariaLabel}
-      className="text-accent dark:text-accent-dark hover:text-hover dark:hover:text-hover-dark cursor-pointer p-1"
+      className="text-lg font-medium text-accent dark:text-accent-dark hover:text-hover dark:hover:text-hover-dark cursor-pointer flex items-center gap-1 p-1"
     >
       <Icon className="w-8 h-8" />
       <p className="hidden md:inline">{ariaLabel}</p>
