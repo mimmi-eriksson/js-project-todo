@@ -6,7 +6,7 @@ const Task = ({ task }) => {
   const deleteTask = useTaskStore(state => state.deleteTask)
 
   return (
-    <div className="flex justify-between items-center pl-2 border border-bottom border-border">
+    <div className="flex justify-between items-center pl-2 border-b-1 border-b-border dark:border-b-border-dark">
       <button onClick={() => toggleCompleted(task.id)}>
         <p className={`${task.isCompleted ? 'line-through' : 'no-underline'} decoration-red-500`}>
           {task.task}

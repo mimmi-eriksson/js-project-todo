@@ -48,7 +48,7 @@ const useTaskStore = create(
       }))
     },
 
-    removeAll: () => { set({ tasks: [] }) },
+    deleteAll: () => { set({ tasks: [] }) },
 
     completeAll: () => set(state => ({
       tasks: state.tasks.map(task => {
