@@ -1,6 +1,7 @@
 import useTaskStore from "../stores/useTaskStore"
 import { useState } from "react"
 import ControlsButton from "./ControlsButton"
+import { Trash2, Funnel, SquareCheck, Plus } from "lucide-react"
 
 const Controls = () => {
   const addTask = useTaskStore(state => state.addTask)
@@ -35,19 +36,19 @@ const Controls = () => {
       <form className="w-full" onSubmit={handleSubmit}>
         <div className="flex items-center gap-2 justify-stretch">
           {!inputVisible &&
-            <label htmlFor="addTask" className="bg-white dark:bg-background-dark rounded-lg border border-border dark:border-border-dark flex gap-2 p-2 grow" onClick={() => toggleInputVisible()}>
-              <img src="/assets/icons/plus.svg" alt="plus icon" />
-              <p className="font-medium text-xl text-accent dark:text-accent-dark">Add task</p>
+            <label htmlFor="addTask" className="bg-white dark:bg-background-dark rounded-lg border border-border dark:border-border-dark text-accent dark:text-accent-dark hover:text-hover dark:hover:text-hover-dark cursor-pointer flex items-center gap-2 p-2 grow" onClick={() => toggleInputVisible()}>
+              <Plus size={28} />
+              <p className="font-medium text-xl">Add task</p>
             </label>}
           {inputVisible &&
             <input className="bg-white dark:bg-background-dark rounded-lg border border-border dark:border-border-dark p-2 grow" type="text" id="addTask" placeholder="Type here..." value={newTask} onChange={handleChange} />
           }
-          {inputVisible && <button className="font-medium text-xl text-accent dark:text-accent-dark px-2 py-1" type="submit">Done</button>}
+          {inputVisible && <button className="font-medium text-xl text-accent dark:text-accent-dark hover:text-hover dark:hover:text-hover-dark cursor-pointer px-2 py-1" type="submit">Done</button>}
           {!inputVisible &&
-            <div className="flex items-center">
-              <ControlsButton icon="/assets/icons/filter.svg" text="Filter" />
-              <ControlsButton onClick={() => completeAll()} icon="/assets/icons/check-box.svg" text="Complete all" />
-              <ControlsButton onClick={() => deleteAll()} icon="/assets/icons/trash-bin.svg" text="Delete all" />
+            <div className="flex items-center gap-1">
+              <ControlsButton icon={Funnel} ariaLabel="Filter" />
+              <ControlsButton onClick={() => completeAll()} icon={SquareCheck} ariaLabel="Complete all" />
+              <ControlsButton onClick={() => deleteAll()} icon={Trash2} ariaLabel="Delete all" />
             </div>}
         </div>
       </form>

@@ -1,3 +1,4 @@
+import { Trash2 } from "lucide-react"
 import TaskButton from "./TaskButton"
 import useTaskStore from "../stores/useTaskStore"
 
@@ -13,7 +14,7 @@ const Task = ({ task }) => {
         </p>
       </button>
       <div>
-        <TaskButton onClick={() => deleteTask(task.id)} icon="/assets/icons/trash-bin.svg" />
+        <TaskButton onClick={() => deleteTask(task.id)} icon={Trash2} ariaLabel="Delete task" />
       </div>
     </div>
   )
