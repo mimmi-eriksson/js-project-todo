@@ -56,6 +56,10 @@ const useTaskStore = create(
       })
     })),
 
+    hideCompleted: () => set(state => ({
+      tasks: state.tasks.filter(task => !task.isCompleted)
+    })),
+
   }))
 )
 
