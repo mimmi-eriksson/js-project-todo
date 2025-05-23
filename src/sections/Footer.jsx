@@ -1,10 +1,12 @@
 import { Github, Linkedin } from 'lucide-react'
 import SocialButton from '../components/SocialButton'
+import useThemeStore from '../stores/useThemeStore'
 
 const Footer = () => {
+  const theme = useThemeStore(state => state.theme)
   return (
     <footer>
-      <div className="bg-primary dark:bg-secondary text-secondary dark:text-primary text-sm flex items-center justify-center gap-4 py-5">
+      <div className={`${theme === 'dark' ? 'dark' : ''} bg-primary dark:bg-secondary text-secondary dark:text-primary text-sm flex items-center justify-center gap-4 py-1`}>
         <p>&copy; {new Date().getFullYear()} Mimmi Eriksson</p>
         <ul
           className="flex gap-2"
