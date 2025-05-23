@@ -35,12 +35,26 @@ const useTaskStore = create(
     },
 
     toggleCompleted: (id) => {
-      set(state => ({ tasks: state.tasks.map(task => { task.id == id ? { ...task, isCompleted: !task.isCompleted } : task }) }))
-    }
+      set(state => ({
+        tasks: state.tasks.map(task => {
+          if (task.id === id) {
+            return { ...task, isCompleted: !task.isCompleted }
+          }
+          else {
+            return task
+          }
+        }
+        )
+      }))
+    },
 
-    // remove all
-    // mark all as completed 
+    removeAll: () => { set({ tasks: [] }) },
 
+    completeAll: () => set(state => ({
+      tasks: state.tasks.map(task => {
+        return { ...task, isCompleted: true }
+      })
+    })),
 
   }))
 )
