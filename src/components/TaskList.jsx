@@ -6,7 +6,7 @@ import useTaskStore from "../stores/useTaskStore"
 const TaskList = () => {
   const tasks = useTaskStore(state => state.tasks)
   return (
-    <div className="bg-white dark:bg-background-dark w-full h-full">
+    <div className="bg-white dark:bg-background-dark w-full flex-grow">
       <div className="flex flex-col">
         {tasks.map(task => <Task key={task.id} task={task} />)}
       </div>
