@@ -1,6 +1,6 @@
-const TaskButton = ({ icon, text }) => {
+const TaskButton = ({ onClick, icon, text }) => {
   return (
-    <button className="bg-surface p-2">
+    <button onClick={onClick} className="bg-surface p-2">
       <img src={icon} alt={text} />
     </button>
   )

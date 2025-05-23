@@ -22,11 +22,13 @@ const Controls = () => {
   }
 
   return (
-    <div className="bg-surface dark:bg-surface-dark">
+    <div className="bg-surface dark:bg-surface-dark px-1 py-2">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="addTask">Add task</label>
-        <input type="text" id="addTask" value={newTask} onChange={handleChange} />
-        <button type="submit">Add task</button>
+        <div className="flex items-center gap-1">
+          <label htmlFor="addTask" className="hidden">Add task</label>
+          <input className="bg-white dark:bg-background-dark rounded border border-border" type="text" id="addTask" value={newTask} onChange={handleChange} />
+          <button type="submit">Add task</button>
+        </div>
       </form>
     </div>
   )

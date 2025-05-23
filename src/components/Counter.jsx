@@ -1,7 +1,10 @@
+import useTaskStore from "../stores/useTaskStore"
+
 const Counter = () => {
+  const tasks = useTaskStore(state => state.tasks)
   return (
-    <div>
-      <p>counter</p>
+    <div className="py-5 text-center">
+      <p>tasks: {tasks.length}</p>
     </div>
   )
 }
