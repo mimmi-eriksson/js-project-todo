@@ -5,7 +5,7 @@ const Counter = () => {
   const completedTasks = tasks.filter(task => task.isCompleted)
 
   return (
-    <div className="py-5 text-center">
+    <div className="py-8 text-center">
       <p> {completedTasks.length} of {tasks.length} tasks remaining</p>
     </div>
   )

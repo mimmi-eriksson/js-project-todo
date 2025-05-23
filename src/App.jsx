@@ -7,7 +7,7 @@ export const App = () => {
     <>
       <Header />
       <MainSection />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
