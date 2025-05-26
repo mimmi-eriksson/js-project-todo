@@ -6,7 +6,7 @@ const Footer = () => {
   const theme = useThemeStore(state => state.theme)
   return (
     <footer>
-      <div className={`${theme === 'dark' ? 'dark' : ''} bg-primary dark:bg-secondary text-secondary dark:text-primary text-sm flex items-center justify-center gap-4 py-1`}>
+      <div className={`${theme === 'dark' ? 'dark' : ''} bg-primary dark:bg-secondary text-secondary dark:text-primary border-t border-t-border dark:border-t-border-dark text-sm flex items-center justify-center gap-4 py-1`}>
         <p>&copy; {new Date().getFullYear()} Mimmi Eriksson</p>
         <ul
           className="flex gap-2"

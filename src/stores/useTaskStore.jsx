@@ -1,24 +1,9 @@
 import { create } from "zustand"
 import { devtools } from "zustand/middleware"
 
-const initialState = {
-  tasks: [
-    {
-      id: 1,
-      task: "uncompleted task",
-      isCompleted: false
-    },
-    {
-      id: 2,
-      task: "completed task",
-      isCompleted: true
-    }
-  ]
-}
-
 const useTaskStore = create(
   devtools((set) => ({
-    ...initialState,
+    tasks: [],
 
     addTask: (task) => {
       const newTask = {

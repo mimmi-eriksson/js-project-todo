@@ -24,7 +24,7 @@ const Controls = () => {
     event.preventDefault()
 
     if (newTask) {
-      addTask(newTask)
+      addTask(newTask.trim())
       setNewTask("")
       setInputVisible(false)
     } else {
@@ -33,7 +33,7 @@ const Controls = () => {
   }
 
   return (
-    <div className="bg-surface dark:bg-surface-dark border-y-1 border-y-border dark:border-y-border-dark w-full px-2 py-4 h-20 flex items-center">
+    <div className="bg-surface dark:bg-surface-dark border border-border dark:border-border-dark w-full px-2 py-4 h-20 flex items-center max-w-2xl">
       <form className="w-full" onSubmit={handleSubmit}>
         <div className="flex items-center gap-2 justify-stretch">
           {!inputVisible &&
