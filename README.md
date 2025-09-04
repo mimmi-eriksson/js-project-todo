@@ -26,6 +26,6 @@ https://task-completed.netlify.app/
 
 ## Screenshots
 <span>
-<img src="./public/TodoApp-screenshot.png" alt="Screenshot of todo app - dark mode." height="500">
-<img src="./public/TodoApp-screenshot-light.png" alt="Screenshot of todo app - light mode." height="500">
+<img src="./public/TodoApp-screenshot.png" alt="Screenshot of todo app - dark mode." height="400">
+<img src="./public/TodoApp-screenshot-light.png" alt="Screenshot of todo app - light mode." height="400">
 </span>
