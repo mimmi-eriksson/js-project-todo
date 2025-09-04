@@ -9,7 +9,7 @@ Users are able to add, list, filter and remove tasks, and toggle whether a task 
 * All tasks can be deleted by clicking the trash bin icon in the top control bar
 * All tasks can be marked as completed by clicking the check box icon in the top control bar
 * Uncompleted tasks can be filtered out by clicking the funnel icon in the top control bar
-* Toggle between light/dark mode by clicking the button in the header
+* Toggle between light/dark mode by clicking the toggle button in the header
 
 ## Installation & Usage
 Install the required dependencies by running the following command:
@@ -24,5 +24,8 @@ npm run dev
 ## Link
 https://task-completed.netlify.app/
 
-## Screenshot
-<img src="./public/TodoApp-screenshot.png" alt="Screenshot of todo app." height="500">
+## Screenshots
+<span>
+<img src="./public/TodoApp-screenshot.png" alt="Screenshot of todo app - dark mode." height="500">
+<img src="./public/TodoApp-screenshot-light.png" alt="Screenshot of todo app - light mode." height="500">
+</span>
